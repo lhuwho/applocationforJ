@@ -18,10 +18,12 @@ namespace applocationforJ
         Bitmap img;
         int PicX = 0;
         int PicY = 0;
-        Int64 AllC = 0;Int64 ALLM = 0;Int64 ALLY = 0;Int64 ALLK = 0;Int64 ALLR = 0;Int64 ALLG = 0;
+        int PicArea = 0;
+        Int64 AllC = 0; Int64 ALLM = 0; Int64 ALLY = 0; Int64 ALLK = 0; Int64 ALLR = 0; Int64 ALLG = 0;
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.DoubleClick += new EventHandler(pictureBox1_DoubleClick);
         }
 
         private void pictureBox1_DragDrop(object sender, DragEventArgs e)
@@ -31,11 +33,26 @@ namespace applocationforJ
                 //拖曳檔案是否存在
                 if (File.Exists(fileName))
                 {
-                    img = new Bitmap(fileName);
-                    PicX = img.Width; PicY = img.Height;
-                    //MessageBox.Show(PicX.ToString());
-                    //將圖片顯示在pictureBox1
-                    pictureBox1.Image = img;
+                    String ext = Path.GetExtension(fileName);
+                    if (ext.Equals("tiff") || ext.Equals("png"))
+                    {
+                        img = new Bitmap(fileName);
+                        PicX = img.Width;
+                        PicY = img.Height;
+                        PicArea = PicX * PicY;
+                        widthText.Text = PicX.ToString();
+                        heightText.Text = PicY.ToString();
+                        areaText.Text = PicArea.ToString();
+
+                        //MessageBox.Show(PicX.ToString());
+                        //將圖片顯示在pictureBox1
+                        pictureBox1.Image = img;
+                    }
+                    else
+                    {
+                        MessageBox.Show("圖檔附檔名不為Tif或Png");
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -67,12 +84,49 @@ namespace applocationforJ
 
         private void Clear_Click(object sender, EventArgs e)
         {
+            widthText.Text = "";
+            heightText.Text = "";
+            areaText.Text = "";
+            C_Val.Text = "";
+            M_Val.Text = "";
+            Y_Val.Text = "";
+            K_Val.Text = "";
+            R_Val.Text = "";
+            G_Val.Text = "";
+            pictureBox1.Image = null;
 
         }
 
         private void QuickCalculate_Click(object sender, EventArgs e)
         {
 
+        }
+        void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdPic = new OpenFileDialog();
+            //取得或設定目前的檔名擴展名，以決定出現在對話方塊中[檔案類型] 的選項。
+            ofdPic.Filter = "PNG|*.png|TIFF|*.tif;*.tiff";
+            //取得或設定檔案對話方塊中目前所選取之篩選條件的索引
+            ofdPic.FilterIndex = 1;
+            //關閉對話框，還原當前的目錄
+            ofdPic.RestoreDirectory = true;
+            //取得或設定含有檔案對話方塊中所選文件的名稱。
+            ofdPic.FileName = "";
+            if (ofdPic.ShowDialog() == DialogResult.OK)
+            {
+                //得到文件名及路徑
+                string sPicPaht = ofdPic.FileName.ToString();
+                img = new Bitmap(sPicPaht);
+                pictureBox1.Image = img;
+
+                PicX = img.Width;
+                PicY = img.Height;
+                PicArea = PicX * PicY;
+                widthText.Text = PicX.ToString();
+                heightText.Text = PicY.ToString();
+                areaText.Text = PicArea.ToString();
+
+            }
         }
     }
 }
