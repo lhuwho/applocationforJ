@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Calculate = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.widthText = new System.Windows.Forms.TextBox();
             this.heightText = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@
             this.G_Val = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.QuickCalculate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,23 +66,25 @@
             this.pictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
             this.pictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
             // 
-            // button1
+            // Calculate
             // 
-            this.button1.Location = new System.Drawing.Point(28, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Calculate.Location = new System.Drawing.Point(28, 386);
+            this.Calculate.Name = "Calculate";
+            this.Calculate.Size = new System.Drawing.Size(112, 38);
+            this.Calculate.TabIndex = 1;
+            this.Calculate.Text = "Calculate";
+            this.Calculate.UseVisualStyleBackColor = true;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
-            // button2
+            // Clear
             // 
-            this.button2.Location = new System.Drawing.Point(190, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Clear.Location = new System.Drawing.Point(190, 386);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(108, 38);
+            this.Clear.TabIndex = 2;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // label1
             // 
@@ -255,11 +258,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Attr";
             // 
+            // QuickCalculate
+            // 
+            this.QuickCalculate.Location = new System.Drawing.Point(486, 131);
+            this.QuickCalculate.Name = "QuickCalculate";
+            this.QuickCalculate.Size = new System.Drawing.Size(114, 28);
+            this.QuickCalculate.TabIndex = 22;
+            this.QuickCalculate.Text = "QuickCalculate";
+            this.QuickCalculate.UseVisualStyleBackColor = true;
+            this.QuickCalculate.Click += new System.EventHandler(this.QuickCalculate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 475);
+            this.Controls.Add(this.QuickCalculate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.areaText);
             this.Controls.Add(this.label3);
@@ -267,8 +281,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.widthText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Calculate);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -284,8 +298,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Calculate;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox widthText;
         private System.Windows.Forms.TextBox heightText;
@@ -305,6 +319,7 @@
         private System.Windows.Forms.Label G_Val;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button QuickCalculate;
     }
 }
 

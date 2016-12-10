@@ -59,5 +59,20 @@ namespace applocationforJ
             //允許pictureBox1接受拖曳檔案
             pictureBox1.AllowDrop = true;
         }
+
+        private void Calculate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuickCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
