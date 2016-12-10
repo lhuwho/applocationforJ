@@ -34,7 +34,7 @@ namespace applocationforJ
                 if (File.Exists(fileName))
                 {
                     String ext = Path.GetExtension(fileName);
-                    if (ext.Equals("tiff") || ext.Equals("png") || ext.Equals("tif"))
+                    if (ext.Equals("tiff") || ext.Equals("png"))
                     {
                         img = new Bitmap(fileName);
                         PicX = img.Width;
@@ -50,7 +50,7 @@ namespace applocationforJ
                     }
                     else
                     {
-                        MessageBox.Show("圖檔附檔名不為Tiff或Png");
+                        MessageBox.Show("圖檔附檔名不為Tif或Png");
                     }
 
                 }
