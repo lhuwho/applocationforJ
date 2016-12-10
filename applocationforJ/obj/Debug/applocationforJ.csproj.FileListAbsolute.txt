@@ -7,3 +7,12 @@ D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationfor
 D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.csproj.GenerateResource.Cache
 D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.exe
 D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.pdb
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\bin\Debug\applocationforJ.exe.config
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\bin\Debug\applocationforJ.exe
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\bin\Debug\applocationforJ.pdb
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.csprojResolveAssemblyReference.cache
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.Form1.resources
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.Properties.Resources.resources
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.csproj.GenerateResource.Cache
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.exe
+C:\Users\mingyi\Documents\GitHub\applocationforJ\applocationforJ\obj\Debug\applocationforJ.pdb

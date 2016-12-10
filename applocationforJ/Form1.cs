@@ -15,6 +15,7 @@ namespace applocationforJ
     public partial class Form1 : Form
     {
         string fileName = string.Empty; //宣告一個存取拖曳檔案的路徑
+        Bitmap img;
         int PicX = 0;
         int PicY = 0;
         Int64 AllC = 0;Int64 ALLM = 0;Int64 ALLY = 0;Int64 ALLK = 0;Int64 ALLR = 0;Int64 ALLG = 0;
@@ -30,7 +31,7 @@ namespace applocationforJ
                 //拖曳檔案是否存在
                 if (File.Exists(fileName))
                 {
-                    Bitmap img = new Bitmap(fileName);
+                    img = new Bitmap(fileName);
                     PicX = img.Width; PicY = img.Height;
                     //MessageBox.Show(PicX.ToString());
                     //將圖片顯示在pictureBox1
