@@ -1,0 +1,9 @@
+D:\work\applocationforJ\applocationforJ\applocationforJ\bin\Debug\applocationforJ.exe.config
+D:\work\applocationforJ\applocationforJ\applocationforJ\bin\Debug\applocationforJ.exe
+D:\work\applocationforJ\applocationforJ\applocationforJ\bin\Debug\applocationforJ.pdb
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.csprojResolveAssemblyReference.cache
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.Form1.resources
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.Properties.Resources.resources
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.csproj.GenerateResource.Cache
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.exe
+D:\work\applocationforJ\applocationforJ\applocationforJ\obj\Debug\applocationforJ.pdb
